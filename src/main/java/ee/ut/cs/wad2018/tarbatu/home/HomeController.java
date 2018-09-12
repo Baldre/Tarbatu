@@ -20,9 +20,8 @@ public class HomeController {
             @RequestParam(
                     value="name-from-url",
                     required = false,
-                    defaultValue = "World") String name,
-            Model model){
-        model.addAttribute("name-template", name);
+                    defaultValue = "World") String nameFromUrl, Model model){
+        model.addAttribute("nameTemplate", nameFromUrl);
         return "home/index_dynamic";
     }
 }

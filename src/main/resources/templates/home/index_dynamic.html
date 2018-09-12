@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script type="application/javascript" src="js/main.js"></script>
+</head>
+
+<body onload="initMain();">
+<canvas id="backg"></canvas>
+
+<h1 th:text="'Hello, ' + ${nameTemplate} + '!'"></h1>
+
+
+</body>
+</html>

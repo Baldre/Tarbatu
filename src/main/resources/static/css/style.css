@@ -1,0 +1,13 @@
+*{
+    cursor: wait;
+}
+
+p {
+    color: red;
+}
+
+#backg{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+}
