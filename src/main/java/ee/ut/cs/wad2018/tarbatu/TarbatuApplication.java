@@ -10,3 +10,5 @@ public class TarbatuApplication {
 		SpringApplication.run(TarbatuApplication.class, args);
 	}
 }
+
+// Testin pushimist
