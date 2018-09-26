@@ -2,8 +2,24 @@
     cursor: wait;
 }
 
+body, html{
+    font-size: 20px;
+    font-family: "Comic Sans MS", fantasy;
+    text-align:center;
+    line-height: 1.5rem;
+}
+body{
+    background: aliceblue;
+    margin: 0px;
+}
+header{
+    max-height: 200px;
+    height: 10vm;
+}
 p {
     color: red;
+    font-size: 0.7rem;
+    color: #16161d;
 }
 
 #backg{
