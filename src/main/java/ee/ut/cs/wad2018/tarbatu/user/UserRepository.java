@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
     // SELECT * FROM users
-    @Override
     List<User> findAll();
     @Query(value = "SELECT * FROM users WHERE userId = :userId",
             nativeQuery = true)

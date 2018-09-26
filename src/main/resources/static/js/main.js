@@ -1,18 +1,15 @@
 var canvas, ctx;
-var rect = { x: 40, y: 40, radius: 60, width: 40, height: 40, v: 2 };
+var rect = { x: 40, y: 40, radius: 60, width: 40, height: 40, v: 3 };
 var mousepos = { x: 100, y: 100 };
 
 function initMain() {
-    canvas = document.querySelector("#backg");  //PEAB LISAMA
+    canvas = document.querySelector("#backg");
     ctx = canvas.getContext("2d");
-    window.addEventListener("mousemove", function (evt) { mousepos = getMousePos(canvas, evt); }, false);
+    window.addEventListener("mousemove", function (evt) { mousepos = getMouse(canvas, evt); }, false);
     window.addEventListener("resize", resizeCanvas, false);
 
     resizeCanvas();
     mainloop();
-
-    log("Uus Javascript edukalt lisatud");
-    console.log("test");
 }
 
 function resizeCanvas() {
@@ -41,14 +38,10 @@ function drawRectangle(angle) {
     ctx.restore();
 }
 
-function getMousePos(canvas, evt) {
+function getMouse(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {
         x: evt.clientX - rect.left,
         y: evt.clientY - rect.top
     };
-}
-
-function log(message) {
-    console.log(message);
 }
