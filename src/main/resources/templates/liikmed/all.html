@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ee" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Hello world.</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+<ul>
+    <li th:each="liige : ${liikmed}" th:text="${liige.getEesnimi()}"></li>
+</ul>
+<script type="application/javascript" src="js/main.js"></script>
+</body>
+</html>
