@@ -32,6 +32,7 @@ dependencies {
 
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	runtime('org.postgresql:postgresql')
+	runtime "javax.xml.bind:jaxb-api"
 
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')

@@ -11,4 +11,4 @@ public class TarbatuApplication {
 	}
 }
 
-// Testin pushimistk
+// Testin pushimist
