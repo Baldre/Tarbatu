@@ -12,11 +12,7 @@ function initMain(){
     pilt.onclick = function(){
         pildiKlikk();
     }
-    /*
-    pilt.setAttribute("src", "images/smile.png");
-    pilt.setAttribute("height", "100");
-    pilt.setAttribute("width", "100");
-    pilt.setAttribute("alt", "I'm so happy");*/
+
     koht.appendChild(pilt);
 }
 
