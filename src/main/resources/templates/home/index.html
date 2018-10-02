@@ -2,22 +2,14 @@
 <html lang="ee" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Tarbatu</title>
-    <meta charset="utf-8" name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/bootstrap.js"></script>
-    <script src="js/npm.js"></script>
-    <script src="js/mainPage.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tarbatu</title>
+    <script type="application/javascript" src="js/main.js"></script>
 </head>
-<body onload="initMain()">
+<body>
 <header>Tarbatu</header>
-<br><p>Lehe omanikud</p>
-<ul>
-    <li th:each="liige : ${liikmed}" th:text="${liige.getEesnimi()}"></li>
-</ul>
-<p>Meid on kokku <span th:text="${hulk}"></span></p>
-<div id="pilt"></div>
+<p>Hello World</p>
 <footer>KarlKarlKarl 2018</footer>
 </body>
 </html>

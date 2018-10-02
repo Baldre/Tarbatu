@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long userid;
+    private Long userId;
     @Max(50)
     @NotNull
     private String username;

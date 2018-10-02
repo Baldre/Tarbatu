@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeController {
 
-    /*@GetMapping(path = "/")
+    @GetMapping(path = "/")
     public String getTestPage(){
         return "home/index";
-    }*/
+    }
 
     @GetMapping(path = "/test-dynamic")
     public String getTest2Page(
@@ -24,5 +24,4 @@ public class HomeController {
         model.addAttribute("nameTemplate", nameFromUrl);
         return "home/index_dynamic";
     }
-
 }
