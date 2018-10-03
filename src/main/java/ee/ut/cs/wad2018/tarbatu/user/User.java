@@ -17,4 +17,8 @@ public class User {
     @Max(50)
     @NotNull
     private String username;
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }

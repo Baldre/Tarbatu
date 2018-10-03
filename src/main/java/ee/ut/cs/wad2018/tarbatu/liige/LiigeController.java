@@ -19,11 +19,12 @@ public class LiigeController {
         return "liikmed/all";
     }
 
+    /*
     @GetMapping("/")
     public String FrontPage(Model model){
         model.addAttribute("liikmed", liigeRepository.findAll());
         model.addAttribute("hulk", liigeRepository.hulk());
         return "home/index";
-    }
+    }*/
 
 }
