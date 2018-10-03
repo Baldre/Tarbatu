@@ -14,4 +14,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query(value = "SELECT * FROM users WHERE userid = :userid", nativeQuery = true)
     User findByUserId(@Param("userid") Long userid);
+
+    /*
+    @Query(value = "INSERT INTO users (username) VALUES (:username)", nativeQuery = true)
+    @Modifying
+    void insertUser(@Param("username") String username);
+     */
 }

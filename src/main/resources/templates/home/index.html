@@ -6,21 +6,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/mainPage.js"></script>
 </head>
-<<<<<<< Updated upstream
 <body onload="initMain()">
-<header>Tarbatu</header>
+<header>Tarbatu siseveeb</header>
 <br><p>Lehe omanikud</p>
 <ul>
-    <li th:each="liige : ${liikmed}" th:text="${'PLACEHOLDER'}"></li>
+    <li th:each="liige : ${liikmed}" th:text="${liige.getEesnimi()}"></li>
 </ul>
 <p th:text= "'Meid on kokku ' + ${hulk}"></p>
 <div id="pilt"></div>
-</body>
-=======
-<body>
-<header>Tarbatu siseveeb</header>
-<p>Hello World, tervist Tarbatu! Tantsida on tore!</p>
->>>>>>> Stashed changes
 <footer>KarlKarlKarl 2018</footer>
 </body>
 </html>
