@@ -1,1 +1,1 @@
-web java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
+web bin/start-pgbouncer-stunnel java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
