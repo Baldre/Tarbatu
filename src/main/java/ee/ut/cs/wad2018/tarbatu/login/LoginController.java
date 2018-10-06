@@ -14,4 +14,12 @@ public class LoginController {
     public String login() {
         return "login/login";
     }
+
+
+    // Login form with error
+    @GetMapping(path = "/login-error.html")
+    public String loginError(Model model) {
+        model.addAttribute("loginError", true);
+        return "login/login.html";
+    }
 }
