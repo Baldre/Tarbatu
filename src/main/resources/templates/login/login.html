@@ -6,6 +6,7 @@
 <body>
     <h1>Login page</h1>
     <form th:action="@{/login}" th:object="${loginForm}" method="post">
+    <p th:if="${invalidCredentials}" class="error">Vale kasutajanimi või salasõna</p>
         <label for="username">Username</label>
         <input type="text" id="username" name="username" autofocus="autofocus"/>
 

@@ -29,7 +29,7 @@ public class LoginController {
         }
 
         //Kui on valed andmed.
-        model.addAttribute("Valed andmed", true);
+        model.addAttribute("invalidCredentials", true);
         return "login/login";
     }
 }
