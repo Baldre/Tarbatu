@@ -1,14 +1,11 @@
 package ee.ut.cs.wad2018.tarbatu.home;
 
-import ee.ut.cs.wad2018.tarbatu.liige.Liige;
 import ee.ut.cs.wad2018.tarbatu.liige.LiigeRepository;
-import ee.ut.cs.wad2018.tarbatu.user.UserRepository;
+import ee.ut.cs.wad2018.tarbatu.user.*;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HomeController {
@@ -37,4 +34,17 @@ public class HomeController {
         return "home/index_dynamic";
     }
 
+    @GetMapping("/liitu")
+    public String getLiituPage(Model model){
+        model.addAttribute("users", userRepository.findAll());
+        model.addAttribute("user", new User());
+        return "users/liitu";
+    }
+
+    @PostMapping("/liitu")
+    public String liitumisAvaldus(@ModelAttribute Userform form){
+        userRepository.save(new User(form.getUsername(), form.getCode()));
+
+        return "redirect:/users";
+    }
 }

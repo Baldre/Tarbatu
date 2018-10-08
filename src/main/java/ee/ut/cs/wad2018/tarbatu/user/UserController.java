@@ -13,18 +13,8 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public String showAllUsers(Model model) {
-        model.addAttribute("users", userRepository.findAll());
+    public String showAuthUsers(Model model) {
+        model.addAttribute("users", userRepository.findAuthUsers());
         return "users/all";
     }
-
-
-    /*
-    @RequestMapping(value = "/liitu", method = RequestMethod.POST)
-    @ResponseBody
-    public void set(@ModelAttribute("username") String username){
-        User user = new User();
-        user.setUsername(username);
-        userRepository.save(user);
-    }*/
 }
