@@ -1,22 +1,13 @@
-var koht;
-
 function initMain(){
-    koht = document.querySelector("#pilt");
-    var pilt = document.createElement("img");
-    pilt.id = "pilt";
-    pilt.src = "images/smile.png";
-    pilt.style.width = "100px";
-    pilt.style.height = "100px";
-    pilt.alt = "I'm so happy";
-    pilt.setAttribute("onclick", "pildiKlikk();");
-    pilt.onclick = function(){
-        pildiKlikk();
-    }
-
-    koht.appendChild(pilt);
-}
-
-function pildiKlikk() {
-    document.querySelector("#pilt").remove();
-    koht.remove();
+    var centerpos = new google.maps.LatLng(58.378240, 26.714709);
+    var mapProp = {
+        center: centerpos,
+        navigationControlOptions:{
+            style: google.maps.NavigationControlStyle.SMALL
+        },
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoom:10
+    };
+    var map = new google.maps.Map(document.querySelector("#map"), mapProp);
+    var marker = new google.maps.Marker({position: centerpos, map: map, title: "Home. At least it used to be."});
 }
