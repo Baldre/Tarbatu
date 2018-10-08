@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/mainPage.js"></script>
 </head>
+<h1>Tere tulemast!</h1>
+<a th:href="@{/login}">Logi sisse</a>
 <body onload="initMain()">
 <header>Tarbatu siseveeb</header>
 <br><p>Lehe omanikud</p>
@@ -13,6 +15,7 @@
     <li th:each="liige : ${liikmed}" th:text="${liige.getEesnimi()}"></li>
 </ul>
 <p th:text= "'Meid on kokku ' + ${hulk}"></p>
+<p th:text= "'Tere tulemast tekstirida'"></p>
 <div id="pilt"></div>
 <footer>KarlKarlKarl 2018</footer>
 </body>

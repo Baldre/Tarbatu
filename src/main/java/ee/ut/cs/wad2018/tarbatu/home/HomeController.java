@@ -24,6 +24,8 @@ public class HomeController {
         return "home/index";
     }
 
+
+
     @GetMapping(path = "/test-dynamic")
     public String getTest2Page(
             @RequestParam(

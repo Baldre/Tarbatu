@@ -17,7 +17,7 @@ public class LiigeController {
     public String showAllUsers(Model model) {
         model.addAttribute("liikmed", liigeRepository.findAll());
         return "liikmed/all";
-    }
+}
 
     /*
     @GetMapping("/")
