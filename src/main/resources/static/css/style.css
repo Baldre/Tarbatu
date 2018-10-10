@@ -13,6 +13,11 @@
     height: 25rem;
 }
 
+#peariba{
+    margin-bottom: 0;
+    max-height: 250px;
+}
+
 #map:hover{
     box-shadow: 0 0 0.6rem dimgray;
 }

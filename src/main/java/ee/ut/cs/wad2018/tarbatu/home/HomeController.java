@@ -2,7 +2,6 @@ package ee.ut.cs.wad2018.tarbatu.home;
 
 import ee.ut.cs.wad2018.tarbatu.liige.LiigeRepository;
 import ee.ut.cs.wad2018.tarbatu.user.*;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -24,18 +23,6 @@ public class HomeController {
         return "home/index";
     }
 
-
-
-    @GetMapping(path = "/test-dynamic")
-    public String getTest2Page(
-            @RequestParam(
-                    value="name-from-url",
-                    required = false,
-                    defaultValue = "World") String nameFromUrl, Model model){
-        model.addAttribute("nameTemplate", nameFromUrl);
-        return "home/index_dynamic";
-    }
-
     @GetMapping("/liitu")
     public String getLiituPage(Model model){
         model.addAttribute("users", userRepository.findAll());
@@ -49,4 +36,14 @@ public class HomeController {
 
         return "redirect:/users";
     }
+
+    /*@GetMapping(path = "/test-dynamic")
+    public String getTest2Page(
+            @RequestParam(
+                    value="name-from-url",
+                    required = false,
+                    defaultValue = "World") String nameFromUrl, Model model){
+        model.addAttribute("nameTemplate", nameFromUrl);
+        return "home/index_dynamic";
+    }*/
 }

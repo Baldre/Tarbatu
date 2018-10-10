@@ -3,22 +3,44 @@
 <head>
     <title>Tarbatu</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAa01r_rDG2q4cubPehFnkaIsIH5L9p_P8"></script>
     <script src="js/mainPage.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-
 <body onload="initMain()">
-<header><h1>Tarbatu siseveeb</h1></header>
+
+<div class="jumbotron jumbotron-fluid text-center" id="peariba">
+    <div>
+        <h1>Tarbatu Siseveeb</h1>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#colNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="colNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Pealeht</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/users">Kasutajad</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/liitu">Liitu</a>
+            <li class="nav-item">
+                <a class="nav-link" href="/liikmed">Omanikud</a>
+        </ul>
+    </div>
+</nav>
 
 <a th:href="@{/login}">Logi sisse</a>
 <p th:text= "'Tere tulemast tekstirida'"></p>
 <div id = "map"></div>
-<br>
+<p>KarlKarlKarl 2018</p>
 
-<footer>KarlKarlKarl 2018</footer>
 </body>
-
-
 </html>
