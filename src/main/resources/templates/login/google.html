@@ -34,7 +34,7 @@
                 <li class="nav-item"><a class="nav-link" href="/liikmed">Omanikud</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item"><a th:href="@{/login}">Sisene</a></li>
+                <li class="nav-item"><a th:href="@{/userlogin}">Sisene</a></li>
             </ul>
         </div>
     </div>
@@ -47,7 +47,7 @@
             <div class="panel-heading">Google login with OAuth2</div>
             <div class="panel-body">
                 <div class="col-md-12" sec:authorize="!isFullyAuthenticated()">
-                    <a class="btn btn-default" href="/login">Google Login</a>
+                    <a class="btn btn-default" href="/google/login">Google Login</a>
                 </div>
                 <div class="col-md-12" sec:authorize="isFullyAuthenticated()">
                     <a class="btn btn-default" href="/logout">Logout</a>

@@ -12,13 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
 
     // Login formi lehele jõudmine.
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    //*sama siin, login on oauthi puhul mingi default gateway vist?*
+    @RequestMapping(value = "/userlogin", method = RequestMethod.GET)
     public String getLoginForm() {
         return "login/login";
     }
 
     // Andmete kontroll sisselogimisel.
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/userlogin", method = RequestMethod.POST)
     public String login(@ModelAttribute(name = "loginForm") LoginForm loginForm, Model model) {
         String username = loginForm.getUsername();
         String password = loginForm.getPassword();

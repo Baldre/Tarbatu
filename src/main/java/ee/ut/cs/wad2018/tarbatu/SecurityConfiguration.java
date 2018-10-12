@@ -59,7 +59,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     private OAuth2ClientAuthenticationProcessingFilter filter(){
         OAuth2ClientAuthenticationProcessingFilter oAuth2Filter =
-                new OAuth2ClientAuthenticationProcessingFilter("/google");
+                new OAuth2ClientAuthenticationProcessingFilter("/google/login");
 
         OAuth2RestTemplate oAuth2RestTemplate =
                 new OAuth2RestTemplate(authorizationCodeResourceDetails, oAuth2ClientContext);
