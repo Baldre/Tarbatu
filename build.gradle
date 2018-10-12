@@ -41,6 +41,9 @@ dependencies {
 	compile("org.webjars:bootstrap:3.3.7")
 	compile("org.webjars:jquery:3.1.0")
 
+	compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity4')
+	compile('org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.0.RELEASE')
+
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')

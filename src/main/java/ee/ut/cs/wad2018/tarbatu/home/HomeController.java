@@ -37,6 +37,21 @@ public class HomeController {
         return "redirect:/users";
     }
 
+    @GetMapping(path = "/policy")
+    public String getPolicyPage(Model model){
+        return "home/policy";
+    }
+
+    @GetMapping(path = "/google")
+    public String getGooglePage(Model model){
+        return "login/google";
+    }
+
+    @GetMapping(path = "/user")
+    public String getUserPage(Model model){
+        return "login/user";
+    }
+
     /*@GetMapping(path = "/test-dynamic")
     public String getTest2Page(
             @RequestParam(

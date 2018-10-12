@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ee" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Tarbatu - Sisenemine</title>
+    <title>Tarbatu - Sees</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/css/bootstrap.min-3.3.7.css">
@@ -35,21 +35,11 @@
                 <li class="nav-item"><a class="nav-link" href="/liikmed">Omanikud</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-item active"><a th:href="@{/login}">Sisene</a></li>
+                <li class="nav-item"><a th:href="@{/login}">Sisene</a></li>
             </ul>
         </div>
     </div>
 </nav>
-
-<h1>Login page</h1>
-<form th:action="@{/login}" th:object="${loginForm}" method="post">
-    <p th:if="${invalidCredentials}" class="error">Vale kasutajanimi või salasõna</p>
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" autofocus/>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password"/>
-    <button type="submit" class="btn btn-success">Liitu</button>
-</form>
 
 </body>
 </html>
