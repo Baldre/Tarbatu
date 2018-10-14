@@ -13,11 +13,12 @@ public class LiigeController {
         this.liigeRepository = liigeRepository;
     }
 
+    /*
     @GetMapping("/liikmed")
     public String showAllUsers(Model model) {
         model.addAttribute("liikmed", liigeRepository.findAll());
         return "liikmed/all";
-}
+    }*/
 
     /*
     @GetMapping("/")
