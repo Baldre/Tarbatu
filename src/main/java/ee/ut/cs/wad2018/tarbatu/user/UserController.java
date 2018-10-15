@@ -15,6 +15,7 @@ public class UserController {
     @GetMapping("/users")
     public String showAuthUsers(Model model) {
         model.addAttribute("users", userRepository.findAuthUsers());
+
         return "users/all";
     }
 }
