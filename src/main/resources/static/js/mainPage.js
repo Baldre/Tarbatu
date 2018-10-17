@@ -7,5 +7,10 @@ function initMain(){
         zoom:10
     };
     var map = new google.maps.Map(document.querySelector("#map"), mapProp);
-    var marker = new google.maps.Marker({position: centerpos, map: map, title: "Home. At least it used to be."});
+    var marker = new google.maps.Marker({
+        position: centerpos,
+        map: map,
+        title: "Home. At least it used to be.",
+        icon: '/images/liivi.png'
+    });
 }
