@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class LiigeController {
 
-
     private final LiigeRepository liigeRepository;
     LiigeController(LiigeRepository liigeRepository) {
         this.liigeRepository = liigeRepository;
