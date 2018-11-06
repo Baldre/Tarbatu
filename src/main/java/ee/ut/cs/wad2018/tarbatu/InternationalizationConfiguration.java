@@ -16,7 +16,8 @@ public class InternationalizationConfiguration implements WebMvcConfigurer {
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-        sessionLocaleResolver.setDefaultLocale(Locale.US);
+        Locale estLocale = new Locale("ee", "Eesti");
+        sessionLocaleResolver.setDefaultLocale(estLocale);
         return sessionLocaleResolver;
     }
 
