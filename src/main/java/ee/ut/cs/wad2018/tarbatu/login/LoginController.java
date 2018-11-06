@@ -34,15 +34,15 @@ public class LoginController {
         //Kui on õiged andmed
         if ("admin".equals(username) && "admin".equals(password)) {
             User saadetav = new User();
-            saadetav.setUsername("karl_erik97@hotmail.com"); // Saadab e-maili, et sisse-logimine on õnnestunud.
+            saadetav.setUsername(saadetav.getUsername()); // Saadab e-maili, et sisse-logimine on õnnestunud.
+            // Vaja, et e-mail oleks sama, mis username.
 
             try {
                 notificationService.sendNotification(saadetav);
             }
             catch (MailException e) {
-                // Püüa error.
+                // Püüab errori. Ei tee midagi lol
             }
-
 
             return "home/index";
         }
