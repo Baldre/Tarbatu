@@ -1,5 +1,6 @@
 package ee.ut.cs.wad2018.tarbatu.home;
 
+import ee.ut.cs.wad2018.tarbatu.InternationalizationConfiguration;
 import ee.ut.cs.wad2018.tarbatu.liige.LiigeRepository;
 import ee.ut.cs.wad2018.tarbatu.user.*;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,7 @@ public class HomeController {
     public String getTestPage(Model model){
         model.addAttribute("liikmed", liigeRepository.findAll());
         model.addAttribute("hulk", liigeRepository.hulk());
+
         return "home/index";
     }
 
