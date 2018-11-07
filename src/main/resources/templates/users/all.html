@@ -48,5 +48,14 @@
     <li th:each="user : ${users}" th:text="${user.getUsername()}"></li>
 </ul>
 
+<header>
+    <h1>Omanikud</h1>
+    <button id="btn">Vajuta siia, et näha lehe loojaid</button>
+</header>
+
+<div id="ajax"></div>
+
+<script src="js/Ajax.js"></script>
+
 </body>
 </html>
