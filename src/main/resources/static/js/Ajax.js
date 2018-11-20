@@ -7,16 +7,16 @@ btn.addEventListener("click", function () {
     request.onload = function () {
         var data = JSON.parse(request.responseText);
         renderHTML(data);
-        btn.classList.add("hide-me");
     };
     request.send();
+    btn.classList.add("hide-me");
 });
 
 function renderHTML(info) {
     var htmlString = "";
 
     for(i = 0; i < info.length; i++){
-        htmlString += "<p>" + info[i].name;
+        htmlString += "<p>" + info[i].nimi;
     }
 
     ajaxHoidja.insertAdjacentHTML("beforeend", htmlString );
