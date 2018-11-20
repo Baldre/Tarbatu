@@ -38,7 +38,7 @@ public class LoginController {
             // Vaja, et e-mail oleks sama, mis username.
 
             try {
-                notificationService.sendNotification(saadetav);
+                // notificationService.sendNotification(saadetav);
             }
             catch (MailException e) {
                 // Püüab errori. Ei tee midagi lol

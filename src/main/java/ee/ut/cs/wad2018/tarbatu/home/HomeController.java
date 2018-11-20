@@ -21,7 +21,6 @@ public class HomeController {
     public String getTestPage(Model model){
         model.addAttribute("liikmed", liigeRepository.findAll());
         model.addAttribute("hulk", liigeRepository.hulk());
-
         return "home/index";
     }
 

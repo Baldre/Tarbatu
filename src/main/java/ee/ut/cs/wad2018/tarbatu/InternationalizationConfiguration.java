@@ -16,7 +16,7 @@ public class InternationalizationConfiguration implements WebMvcConfigurer {
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver sessionLocaleResolver = new SessionLocaleResolver();
-        Locale estLocale = new Locale("ee", "Eesti");
+        Locale estLocale = new Locale("ee");
         sessionLocaleResolver.setDefaultLocale(estLocale);
         return sessionLocaleResolver;
     }
@@ -25,7 +25,6 @@ public class InternationalizationConfiguration implements WebMvcConfigurer {
     public LocaleChangeInterceptor localeChangeInterceptor() {
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
-        localeChangeInterceptor.setIgnoreInvalidLocale(true);
         return localeChangeInterceptor;
     }
 
