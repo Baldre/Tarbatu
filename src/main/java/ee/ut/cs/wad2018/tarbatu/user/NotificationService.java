@@ -1,4 +1,4 @@
-package ee.ut.cs.wad2018.tarbatu.user;
+/*package ee.ut.cs.wad2018.tarbatu.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
@@ -30,4 +30,4 @@ public class NotificationService {
 
 
 
-}
+}*/

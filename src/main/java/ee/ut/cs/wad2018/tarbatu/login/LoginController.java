@@ -1,9 +1,9 @@
 package ee.ut.cs.wad2018.tarbatu.login;
 
-import ee.ut.cs.wad2018.tarbatu.user.NotificationService;
+//import ee.ut.cs.wad2018.tarbatu.user.NotificationService;
 import ee.ut.cs.wad2018.tarbatu.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
+//import org.springframework.mail.MailException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
 
     @Autowired
-    private NotificationService notificationService;
+    //private NotificationService notificationService;
 
     // Login formi lehele jõudmine.
     //*sama siin, login on oauthi puhul mingi default gateway vist?*
@@ -34,7 +34,7 @@ public class LoginController {
         //Kui on õiged andmed
         if ("admin".equals(username) && "admin".equals(password)) {
             User saadetav = new User();
-            saadetav.setUsername(saadetav.getUsername()); // Saadab e-maili, et sisse-logimine on õnnestunud.
+            /*saadetav.setUsername(saadetav.getUsername()); // Saadab e-maili, et sisse-logimine on õnnestunud.
             // Vaja, et e-mail oleks sama, mis username.
 
             try {
@@ -42,7 +42,7 @@ public class LoginController {
             }
             catch (MailException e) {
                 // Püüab errori. Ei tee midagi lol
-            }
+            }*/
 
             return "home/index";
         }
