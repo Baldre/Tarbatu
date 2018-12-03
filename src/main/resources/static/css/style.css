@@ -2,6 +2,10 @@
     cursor: wait;
 }
 
+.hide-me{
+    visibility: hidden;
+}
+
 #backg{
     pointer-events: none;
     position: absolute;
