@@ -48,13 +48,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/**").permitAll()
                 .and().addFilterAt(filter(), BasicAuthenticationFilter.class)
                 .logout().logoutSuccessUrl("/");
-        /*       http
-                .formLogin()
-                .loginPage("/login")
-                .failureUrl("/login-error")
-                .and()
-                .logout()
-                .logoutSuccessUrl("/index.html");*/
     }
 
     private OAuth2ClientAuthenticationProcessingFilter filter(){
