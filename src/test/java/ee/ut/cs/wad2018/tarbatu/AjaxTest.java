@@ -17,9 +17,9 @@ public class AjaxTest {
 
         // Testin, kas nupp peidetakse ära
         if (button.getAttribute("class").equals("hide-me")) {
-            System.out.println("Test completed");
+            System.out.println("Test completed: nupp peidetakse");
         } else {
-            System.out.println("Test failed");
+            System.out.println("Test failed: nupp jääb nähtavale");
         }
         WebElement omanikud = driver.findElement(By.id("ajax"));
         WebElement omanik1 = omanikud.findElements(By.tagName("p")).get(0);
@@ -28,10 +28,12 @@ public class AjaxTest {
 
         // Testin, kas omanike nimed on õiged
         if (omanik1.getText().equals("Karl Jaagup Kask") && omanik2.getText().equals("Karl Johannes Balder") && omanik3.getText().equals("Karl Erik Karindi")) {
-            System.out.println("Test completed");
+            System.out.println("Test completed: omanikude nimed on õiged");
         } else {
-            System.out.println("Test failed");
+            System.out.println("Test failed: omaniku nimed ei kattu");
 
         }
+
+        driver.close();
     }
 }
