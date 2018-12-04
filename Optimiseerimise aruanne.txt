@@ -1,0 +1,25 @@
+1. Alla laetavate elementide arv - 31
+   Alla laetud elementide mahud - 594.7 KB
+   Alla laetud elementide järjekord - css, javascript , pildid, javascript
+   Alla laadimiseks kulunud aeg - 996ms
+   
+   PageSpeed indeks - 5.0s
+   Lehe esitamiseks kulunud aeg - 1.8s
+
+2/3. Eliminate render-blocking resources - Kombineerisime javascript failid. Lisasime jqery jaoks skripti, mis kutsub teda alles
+					   peale lehe laadimist välja ja kui on üldse vaja
+     Defer unused CSS - CSS, mida PageSpeed arvas mittekasutatavaks, on lehe välimuse juures vajalik
+     Serve images in next-gen formats - probleem esines google mapsi enda piltidega,
+				      mida me ei hakanud muutma
+
+4. Alla laetavate elementide arv - 29
+   Alla laetud elementide mahud - 578.8 KB
+   Alla laetud elementide järjekord - css, javascript , pildid, javascript
+   Alla laadimiseks kulunud aeg - 912ms
+
+   PageSpeed indeks - 4.5s
+   Lehe esitamiseks kulunud aeg - 1.4s
+
+   Võit - 0.4s
+
+   Google PageSpeed Skoor - 64 -> 74
