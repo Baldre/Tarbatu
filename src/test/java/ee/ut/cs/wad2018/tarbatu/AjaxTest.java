@@ -27,7 +27,6 @@ public class AjaxTest {
         WebElement omanik1 = omanikud.findElements(By.tagName("p")).get(0);
         WebElement omanik2 = omanikud.findElements(By.tagName("p")).get(1);
         WebElement omanik3 = omanikud.findElements(By.tagName("p")).get(2);
-        driver.close();
 
         // Testin, kas omanike nimed on õiged
         if (omanik1.getText().equals("Karl Jaagup Kask") && omanik2.getText().equals("Karl Johannes Balder") && omanik3.getText().equals("Karl Erik Karindi")) {
@@ -36,5 +35,6 @@ public class AjaxTest {
             System.out.println("Test failed: omaniku nimed ei kattu");
 
         }
+        driver.close();
     }
 }
