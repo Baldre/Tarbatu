@@ -14,7 +14,7 @@ public class AjaxTest {
         driver.manage().window().maximize();
         WebElement button = driver.findElement(By.id("btn"));
         button.click();
-        
+
         // Testin, kas nupp peidetakse ära
         if (button.getAttribute("class").equals("hide-me")) {
             System.out.println("Test completed");
