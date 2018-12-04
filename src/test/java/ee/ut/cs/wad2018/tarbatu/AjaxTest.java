@@ -21,6 +21,8 @@ public class AjaxTest {
         } else {
             System.out.println("Test failed: nupp jääb nähtavale");
         }
+
+        // Millegipärast jookseb mõnikord ajaxi leidmisel errorisse
         WebElement omanikud = driver.findElement(By.id("ajax"));
         WebElement omanik1 = omanikud.findElements(By.tagName("p")).get(0);
         WebElement omanik2 = omanikud.findElements(By.tagName("p")).get(1);
@@ -33,7 +35,6 @@ public class AjaxTest {
             System.out.println("Test failed: omaniku nimed ei kattu");
 
         }
-
         driver.close();
     }
 }
